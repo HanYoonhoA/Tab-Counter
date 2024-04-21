@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tab Counter</title>
+  <style>
+    body {
+      width: 300px;
+      margin: 0 auto;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      padding: 20px;
+      color: #333;
+    }
+    h1 {
+      margin-top: 0;
+      color: #555;
+    }
+    h2 {
+      color: #666;
+    }
+    #tabCount {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #007bff;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      margin-bottom: 8px;
+      transition: background-color 0.3s;
+      border: 1px solid #ddd;
+      padding: 8px;
+      border-radius: 5px;
+    }
+    li:hover {
+      background-color: #f0f0f0;
+    }
+    #searchInput {
+      margin-bottom: 10px;
+      padding: 8px;
+      width: 80%;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+    #sortAlphabetically, #sortByCount {
+      margin: 5px;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background-color: #007bff;
+      color: #fff;
+      transition: background-color 0.3s;
+    }
+    #sortAlphabetically:hover, #sortByCount:hover {
+      background-color: #0056b3;
+    }
+    #theme {
+      margin-bottom: 10px;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+    #recentOpened, #recentClosed {
+      margin-top: 20px;
+      color: #777;
+    }
+    #madeBy {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      color: rgba(0, 0, 0, 0.5);
+      font-size: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Tab Counter</h1>
+  <p id="tabCount">Loading...</p>
+  <label for="searchInput">Search:</label>
+  <input type="text" id="searchInput" placeholder="Type to search...">
+  <h2>Websites:</h2>
+  <ul id="websiteList"></ul>
+  <label for="displayType">Sort by:</label>
+  <select id="displayType">
+    <option value="AB">A-B</option>
+    <option value="123">1-10</option>
+  </select>
+  <button id="sortAlphabetically">Sort A-Z</button>
+  <button id="sortByCount">Sort by Count</button>
+  <label for="theme">Theme:</label>
+  <select id="theme">
+    <option value="light">Light</option>
+    <option value="dark">Dark</option>
+  </select>
+  <p id="recentOpened">Most Recent Opened: Loading...</p>
+  <p id="recentClosed">Most Recent Closed: Loading...</p>
+  
+  <!-- "Made by" text -->
+  <p id="madeBy">
+    Made by <a href="https://www.instagram.com/rey_plsi/" target="_blank" style="color: rgba(0, 0, 0, 0.5); text-decoration: none;">Rey_Plsi</a>
+  </p>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
